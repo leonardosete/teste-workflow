@@ -1,0 +1,19 @@
+name: Workflow para Testes
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  teste_workflow:
+    name: Steps apenas para teste
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📦 Checkout do código
+        uses: actions/checkout@v4
+
+      - name: 🧩 Step de teste para o GT-Dash
+        run: |
+          echo "testando..."
+          sleep 60
+          echo "finalizado."
